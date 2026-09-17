@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E1B4B" />
+    </linearGradient>
+
+    <!-- Brand Color Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <!-- Sunset Coral Gradient -->
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="100%" stop-color="#FF8A65" />
+    </linearGradient>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="80" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+
+  <!-- Ambient Background Glows -->
+  <circle cx="950" cy="180" r="260" fill="#4F46E5" fill-opacity="0.25" filter="url(#glowEffect)" />
+  <circle cx="200" cy="500" r="220" fill="#FF5722" fill-opacity="0.12" filter="url(#glowEffect)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.05" stroke="#FFFFFF" stroke-width="1">
+    <path d="M0 78.75H1200M0 157.5H1200M0 236.25H1200M0 315H1200M0 393.75H1200M0 472.5H1200M0 551.25H1200" />
+    <path d="M150 0V630M300 0V630M450 0V630M600 0V630M750 0V630M900 0V630M1050 0V630" />
+  </g>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="1152" height="582" rx="28" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="2" />
+
+  <!-- Brand Header: Logo Mark & Name -->
+  <g transform="translate(80, 80)">
+    <rect width="64" height="64" rx="18" fill="url(#primaryGrad)" />
+    <path d="M32 16L48 29V47C48 48.6569 46.6569 50 45 50H19C17.3431 50 16 48.6569 16 47V29L32 16Z" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M27 50V35C27 33.8954 27.8954 33 29 33H35C36.1046 33 37 33.8954 37 35V50" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="48" cy="20" r="4.5" fill="url(#coralGrad)" stroke="#FFFFFF" stroke-width="1.5" />
+
+    <text x="82" y="44" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif" font-size="38" font-weight="800" letter-spacing="-0.03em">
+      pg<tspan fill="#818CF8">dekho</tspan>
+    </text>
+
+    <!-- Beta Pill -->
+    <rect x="235" y="16" width="68" height="28" rx="14" fill="#FF5722" fill-opacity="0.2" stroke="#FF5722" stroke-opacity="0.4" stroke-width="1" />
+    <text x="253" y="35" fill="#FF8A65" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="0.05em">BETA</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="80" y="250" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif" font-size="54" font-weight="800" letter-spacing="-0.03em" line-height="1.15">
+    Verified PGs, Hostels &amp;
+  </text>
+  <text x="80" y="316" fill="url(#coralGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Plus Jakarta Sans', sans-serif" font-size="54" font-weight="800" letter-spacing="-0.03em">
+    Room Rentals in India.
+  </text>
+
+  <!-- Subtitle -->
+  <text x="80" y="375" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', sans-serif" font-size="22" font-weight="400">
+    Zero Brokerage • 100% Real Photos &amp; Specs • Transparent Deposit Policies
+  </text>
+
+  <!-- Trust Value Cards Strip -->
+  <g transform="translate(80, 430)">
+    <!-- Pill 1 -->
+    <rect width="210" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" />
+    <text x="30" y="32" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">✨ Zero Brokerage</text>
+
+    <!-- Pill 2 -->
+    <rect x="225" width="225" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" />
+    <text x="250" y="32" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">🛡️ Verified Stay Specs</text>
+
+    <!-- Pill 3 -->
+    <rect x="465" width="250" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.15" />
+    <text x="490" y="32" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">📍 Top Indian IT Hubs</text>
+  </g>
+
+  <!-- Footer Info: Author & Domain -->
+  <g transform="translate(80, 550)">
+    <text x="0" y="0" fill="#64748B" font-family="-apple-system, sans-serif" font-size="16" font-weight="500">
+      Built by <tspan fill="#CBD5E1" font-weight="700">Sohan</tspan> • Early Access Q3 2026
+    </text>
+    <text x="1040" y="0" text-anchor="end" fill="#818CF8" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">
+      pgdekho.com
+    </text>
+  </g>
+</svg>
