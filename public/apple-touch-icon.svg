@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="appleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#312E81" />
+    </linearGradient>
+    <linearGradient id="appleAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722" />
+      <stop offset="100%" stop-color="#E64A19" />
+    </linearGradient>
+  </defs>
+
+  <rect width="180" height="180" rx="40" fill="url(#appleBg)" />
+  <rect x="4" y="4" width="172" height="172" rx="36" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="3" />
+
+  <path d="M90 38L140 78V138C140 142.418 136.418 146 132 146H48C43.5817 146 40 142.418 40 138V78L90 38Z" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M74 146V100C74 96.6863 76.6863 94 80 94H100C103.314 94 106 96.6863 106 100V146" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <circle cx="136" cy="46" r="10" fill="url(#appleAccent)" stroke="#FFFFFF" stroke-width="2.5" />
+</svg>

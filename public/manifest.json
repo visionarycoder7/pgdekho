@@ -1,12 +1,19 @@
 {
   "short_name": "PG Dekho",
   "name": "PG Dekho — Verified PGs, Hostels & Room Rentals",
-  "description": "Discover verified PGs, hostels, flats, and rooms with transparent rent, amenities, and food details.",
+  "description": "Discover verified PGs, hostels, flats, and rooms with transparent rent, real amenity specs, and zero brokerage across India.",
   "icons": [
     {
       "src": "/favicon.svg",
       "type": "image/svg+xml",
-      "sizes": "192x192 512x512"
+      "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "180x180",
+      "purpose": "apple touch icon"
     }
   ],
   "start_url": "/",
