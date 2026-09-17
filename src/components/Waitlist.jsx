@@ -10,7 +10,8 @@ import {
   Loader2, 
   Share2, 
   ShieldCheck,
-  AlertCircle
+  AlertCircle,
+  Ticket
 } from 'lucide-react';
 import { submitWaitlist } from '../services/api';
 
@@ -154,9 +155,20 @@ export default function Waitlist({ initialRole = 'renter' }) {
                 <CheckCircle2 size={36} />
               </div>
 
-              <span className="badge badge-success" style={{ fontSize: '0.82rem', padding: '0.35rem 0.85rem', marginBottom: '0.85rem' }}>
-                🎉 Priority Waitlist Ticket #{submittedData.queuePosition}
-              </span>
+              <div 
+                className="badge badge-success" 
+                style={{ 
+                  fontSize: '0.82rem', 
+                  padding: '0.35rem 0.85rem', 
+                  marginBottom: '0.85rem',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
+              >
+                <Ticket size={14} />
+                <span>Priority Waitlist Ticket #{submittedData.queuePosition}</span>
+              </div>
 
               <h3 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
                 You're on the list!
@@ -191,7 +203,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
             <div 
               className="glass-card"
               style={{
-                padding: '2.5rem 2rem',
+                padding: 'clamp(1.5rem, 4vw, 2.5rem)',
                 borderRadius: 'var(--radius-xl)',
                 boxShadow: 'var(--shadow-xl)',
                 border: '1px solid rgba(226, 232, 240, 0.9)',
@@ -205,7 +217,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                   <label className="input-label" style={{ marginBottom: '0.65rem', display: 'block' }}>
                     I am joining as a:
                   </label>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.75rem' }}>
                     
                     <button
                       type="button"
@@ -216,6 +228,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                         justifyContent: 'center',
                         gap: '0.5rem',
                         padding: '0.75rem 1rem',
+                        minHeight: '44px',
                         borderRadius: 'var(--radius-md)',
                         border: userRole === 'renter' ? '2px solid var(--primary)' : '1px solid var(--border-light)',
                         backgroundColor: userRole === 'renter' ? 'var(--primary-light)' : 'var(--bg-main)',
@@ -226,7 +239,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                         transition: 'all var(--transition-fast)'
                       }}
                     >
-                      <Users size={18} />
+                      <Users size={17} />
                       <span>Renter / Student</span>
                     </button>
 
@@ -239,6 +252,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                         justifyContent: 'center',
                         gap: '0.5rem',
                         padding: '0.75rem 1rem',
+                        minHeight: '44px',
                         borderRadius: 'var(--radius-md)',
                         border: userRole === 'owner' ? '2px solid var(--accent)' : '1px solid var(--border-light)',
                         backgroundColor: userRole === 'owner' ? 'var(--accent-light)' : 'var(--bg-main)',
@@ -249,7 +263,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                         transition: 'all var(--transition-fast)'
                       }}
                     >
-                      <Building2 size={18} />
+                      <Building2 size={17} />
                       <span>Property / PG Owner</span>
                     </button>
 
@@ -257,7 +271,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                 </div>
 
                 {/* City & Email Inputs Row */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem', marginBottom: '1.25rem', textAlign: 'left' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.25rem', textAlign: 'left' }}>
                   
                   {/* City Dropdown */}
                   <div className="input-group">
@@ -321,7 +335,7 @@ export default function Waitlist({ initialRole = 'renter' }) {
                       textAlign: 'left'
                     }}
                   >
-                    <AlertCircle size={16} />
+                    <AlertCircle size={16} style={{ flexShrink: 0 }} />
                     <span>{errorMsg}</span>
                   </div>
                 )}

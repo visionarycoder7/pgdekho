@@ -1,5 +1,32 @@
 import React from 'react';
-import { Building2, Heart, ArrowUp, Mail, ShieldCheck } from 'lucide-react';
+import { Building2, ArrowUp, Mail, ShieldCheck, Globe, Send, MessageCircle } from 'lucide-react';
+
+// Crisp inline SVGs for social platforms
+function TwitterIcon({ size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon({ size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+    </svg>
+  );
+}
+
+function InstagramIcon({ size = 16 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -113,9 +140,9 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                {/* TODO: Connect real contact email / support portal */}
-                <a href="mailto:hello@pgdekho.com" style={footerLinkStyle}>
-                  hello@pgdekho.com
+                <a href="mailto:hello@pgdekho.com" style={{ ...footerLinkStyle, display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <Mail size={14} color="#818CF8" />
+                  <span>hello@pgdekho.com</span>
                 </a>
               </li>
               <li>
@@ -135,9 +162,8 @@ export default function Footer() {
               Follow our journey as we build and launch the first verified stay ecosystem.
             </p>
 
-            {/* Social Placeholders */}
+            {/* Social Placeholders with Crisp SVG Icons */}
             <div style={{ display: 'flex', gap: '0.75rem' }}>
-              {/* TODO: Update with official social handles once registered */}
               <a
                 href="#twitter"
                 onClick={(e) => e.preventDefault()}
@@ -145,7 +171,7 @@ export default function Footer() {
                 style={socialBtnStyle}
                 title="X / Twitter (Coming Soon)"
               >
-                𝕏
+                <TwitterIcon size={16} />
               </a>
               <a
                 href="#linkedin"
@@ -154,7 +180,7 @@ export default function Footer() {
                 style={socialBtnStyle}
                 title="LinkedIn (Coming Soon)"
               >
-                in
+                <LinkedInIcon size={16} />
               </a>
               <a
                 href="#instagram"
@@ -163,7 +189,7 @@ export default function Footer() {
                 style={socialBtnStyle}
                 title="Instagram (Coming Soon)"
               >
-                ig
+                <InstagramIcon size={16} />
               </a>
             </div>
           </div>
@@ -184,7 +210,7 @@ export default function Footer() {
         >
           <div>
             <p style={{ color: '#64748B' }}>
-              © 2026 PG Dekho. All rights reserved. Made with pride for renters across India.
+              © 2026 PG Dekho. All rights reserved. Created by Sohan.
             </p>
           </div>
 
@@ -229,8 +255,8 @@ const footerLinkStyle = {
 };
 
 const socialBtnStyle = {
-  width: '36px',
-  height: '36px',
+  width: '38px',
+  height: '38px',
   borderRadius: 'var(--radius-md)',
   backgroundColor: 'rgba(255, 255, 255, 0.06)',
   border: '1px solid rgba(255, 255, 255, 0.12)',
@@ -238,8 +264,7 @@ const socialBtnStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  fontWeight: 700,
-  fontSize: '0.85rem',
   textDecoration: 'none',
-  transition: 'all var(--transition-fast)'
+  transition: 'all var(--transition-fast)',
+  cursor: 'pointer'
 };

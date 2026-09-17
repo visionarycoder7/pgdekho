@@ -1,6 +1,7 @@
 /* ==========================================================================
    PG Dekho Design System & Base Styling
    Fully Responsive for Mobile (<640px), Tablet (640-1024px), and PC (>1024px)
+   Includes Theme-Matched Medium-Thick Scrollbar & Scrollbar Gutter Optimization
    ========================================================================== */
 
 :root {
@@ -73,8 +74,12 @@
   padding: 0;
 }
 
+/* Base HTML & Scrollbar Gutter Optimization */
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #818CF8 #F1F5F9;
   font-family: var(--font-body);
   color: var(--text-primary);
   background-color: var(--bg-main);
@@ -82,6 +87,28 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+/* Medium-Thick Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+  border-left: 1px solid var(--border-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94A3B8;
+  border-radius: var(--radius-full);
+  border: 2px solid #F8FAFC;
+  transition: background var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
 body {
@@ -270,7 +297,7 @@ img {
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.75rem 1.5rem;
-  min-height: 44px; /* Accessible touch target size */
+  min-height: 44px;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   cursor: pointer;
