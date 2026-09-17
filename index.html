@@ -2,14 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PG Dekho — Discover Verified PGs, Hostels & Room Rentals | Coming Soon</title>
-    <meta name="description" content="Discover verified PGs, hostels, flats, and rooms with transparent rent, amenities, and food details. Built for students and working professionals across India. Join the waitlist!" />
-    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary SEO Metadata -->
+    <title>PG Dekho — Verified PGs, Hostels & Room Rentals in India</title>
+    <meta name="description" content="Discover verified PGs, hostels, flats, and rooms with transparent rent, real amenity specs, and zero brokerage. Join the VIP waitlist for early access!" />
+    <meta name="keywords" content="PG in Bengaluru, PG in Pune, hostel booking India, rent rooms without brokerage, verified PGs, student co-living, PG Dekho" />
+    <meta name="author" content="PG Dekho Technologies" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://pgdekho.com/" />
+
+    <!-- Theme & Mobile App Readiness -->
+    <meta name="theme-color" content="#4F46E5" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>" />
+
+    <!-- Open Graph (Facebook / LinkedIn / Social Previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pgdekho.com/" />
+    <meta property="og:site_name" content="PG Dekho" />
+    <meta property="og:title" content="PG Dekho — Verified PGs, Hostels & Room Rentals in India" />
+    <meta property="og:description" content="Discover verified PGs, hostels, flats, and rooms with transparent rent, verified amenity specs, and zero brokerage. Join the VIP waitlist!" />
+    <meta property="og:image" content="https://pgdekho.com/assets/hero.png" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pgdekho" />
+    <meta name="twitter:creator" content="@pgdekho" />
+    <meta name="twitter:title" content="PG Dekho — Verified PGs, Hostels & Room Rentals in India" />
+    <meta name="twitter:description" content="Discover verified PGs, hostels, flats, and rooms with transparent rent, real photos, and zero brokerage drama. Join the waitlist!" />
+    <meta name="twitter:image" content="https://pgdekho.com/assets/hero.png" />
+
+    <!-- Preconnect & Google Fonts (Plus Jakarta Sans & Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data (JSON-LD) for Search Engines and AI/GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://pgdekho.com/#organization",
+          "name": "PG Dekho",
+          "url": "https://pgdekho.com",
+          "logo": "https://pgdekho.com/favicon.svg",
+          "sameAs": [
+            "https://twitter.com/pgdekho",
+            "https://linkedin.com/company/pgdekho",
+            "https://instagram.com/pgdekho"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "hello@pgdekho.com",
+            "contactType": "customer support",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pgdekho.com/#website",
+          "url": "https://pgdekho.com",
+          "name": "PG Dekho",
+          "publisher": { "@id": "https://pgdekho.com/#organization" },
+          "description": "Discover verified PGs, hostels, flats, and room rentals with transparent rent and zero brokerage in India."
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pgdekho.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "When will PG Dekho be officially available?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We are currently running private alpha testing in select pockets of Bengaluru and Pune. Public Beta launch is scheduled for Q3 2026. Users on the waitlist receive early priority access."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is PG Dekho free for students and renters?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, discovering and comparing properties, viewing food menus, and directly connecting with property owners is 100% free for renters with zero traditional brokerage fees."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does PG Dekho verify PG & hostel listings?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our ground verification team inspects properties for real room dimensions, tests WiFi upload/download speeds, checks meal kitchen hygiene, and validates owner identity before assigning a PG Dekho Verified badge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which cities will be supported in the initial launch?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The initial rollout covers major student and IT corridors across Bengaluru, Pune, Delhi NCR (Noida, Gurgaon), Hyderabad, Kota, Mumbai, and Chennai."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

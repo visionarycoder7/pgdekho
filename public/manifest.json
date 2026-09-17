@@ -1,0 +1,17 @@
+{
+  "short_name": "PG Dekho",
+  "name": "PG Dekho — Verified PGs, Hostels & Room Rentals",
+  "description": "Discover verified PGs, hostels, flats, and rooms with transparent rent, amenities, and food details.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FAFBFC",
+  "theme_color": "#4F46E5",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,26 @@
+# robots.txt for PG Dekho (https://pgdekho.com)
+
+User-agent: *
+Allow: /
+
+# Allow AI Search & GEO Crawlers (Generative Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemap Location
+Sitemap: https://pgdekho.com/sitemap.xml
