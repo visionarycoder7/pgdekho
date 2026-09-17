@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Compass, Building2, Sparkles, Menu, X, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Home, Compass, Building2, Sparkles, Menu, X, ArrowRight, ShieldCheck, HelpCircle } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +10,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -30,38 +30,40 @@ export default function Navbar() {
         top: 0,
         zIndex: 50,
         transition: 'all var(--transition-normal)',
-        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.92)' : 'rgba(255, 255, 255, 0.75)',
+        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.82)',
         backdropFilter: 'blur(16px)',
         WebkitBackdropFilter: 'blur(16px)',
         borderBottom: isScrolled ? '1px solid var(--border-light)' : '1px solid transparent'
       }}
     >
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4.5rem' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '4.25rem' }}>
         
         {/* Brand Logo & Logo Mark */}
         <a 
           href="#home" 
           onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}
-          style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', textDecoration: 'none' }}
+          aria-label="PG Dekho Home"
         >
           <div 
             style={{
-              width: '40px',
-              height: '40px',
+              width: '38px',
+              height: '38px',
               borderRadius: 'var(--radius-md)',
               background: 'linear-gradient(135deg, var(--primary) 0%, #312E81 100%)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               color: '#FFFFFF',
-              boxShadow: '0 4px 10px rgba(79, 70, 229, 0.35)'
+              boxShadow: '0 4px 10px rgba(79, 70, 229, 0.35)',
+              flexShrink: 0
             }}
           >
-            <Building2 size={22} strokeWidth={2.2} />
+            <Building2 size={20} strokeWidth={2.2} />
           </div>
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <span style={{ fontSize: '1.35rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', fontFamily: 'var(--font-heading)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+              <span style={{ fontSize: '1.3rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)', fontFamily: 'var(--font-heading)' }}>
                 pg<span style={{ color: 'var(--primary)' }}>dekho</span>
               </span>
               <span className="badge badge-accent" style={{ fontSize: '0.65rem', padding: '0.15rem 0.45rem' }}>
@@ -75,7 +77,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Links */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '2rem' }} className="desktop-nav">
+        <nav style={{ display: 'none', alignItems: 'center', gap: '1.75rem' }} className="desktop-nav" aria-label="Main Navigation">
           <button 
             onClick={() => scrollToSection('home')} 
             className="nav-link"
@@ -121,7 +123,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA & Coming Soon Indicator */}
-        <div style={{ display: 'none', alignItems: 'center', gap: '1rem' }} className="desktop-cta">
+        <div style={{ display: 'none', alignItems: 'center', gap: '0.85rem' }} className="desktop-cta">
           <div className="badge badge-success" style={{ padding: '0.35rem 0.75rem', fontSize: '0.78rem' }}>
             <span className="pulse-dot"></span>
             <span>Launching Soon</span>
@@ -130,7 +132,7 @@ export default function Navbar() {
           <button 
             onClick={() => scrollToSection('waitlist')}
             className="btn btn-primary btn-sm"
-            style={{ borderRadius: 'var(--radius-full)', padding: '0.55rem 1.25rem' }}
+            style={{ borderRadius: 'var(--radius-full)', padding: '0.5rem 1.15rem' }}
           >
             <span>Join Waitlist</span>
             <ArrowRight size={15} />
@@ -141,13 +143,14 @@ export default function Navbar() {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="mobile-toggle-btn"
-          aria-label="Toggle navigation menu"
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={mobileMenuOpen}
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            width: '42px',
-            height: '42px',
+            width: '44px',
+            height: '44px',
             borderRadius: 'var(--radius-md)',
             border: '1px solid var(--border-light)',
             backgroundColor: 'var(--bg-surface)',
@@ -167,14 +170,14 @@ export default function Navbar() {
             backgroundColor: 'rgba(255, 255, 255, 0.98)',
             backdropFilter: 'blur(20px)',
             borderBottom: '1px solid var(--border-light)',
-            padding: '1.5rem',
+            padding: '1.25rem',
             display: 'flex',
             flexDirection: 'column',
-            gap: '1rem',
+            gap: '0.75rem',
             boxShadow: 'var(--shadow-lg)'
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.75rem', borderBottom: '1px solid var(--border-light)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.65rem', borderBottom: '1px solid var(--border-light)' }}>
             <div className="badge badge-success" style={{ padding: '0.35rem 0.75rem' }}>
               <span className="pulse-dot"></span>
               <span>In Active Development</span>
@@ -182,7 +185,7 @@ export default function Navbar() {
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Early Access Q3 2026</span>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
             <button onClick={() => scrollToSection('home')} style={mobileNavLinkStyle}>
               <Home size={18} color="var(--primary)" /> Home
             </button>
@@ -198,12 +201,15 @@ export default function Navbar() {
             <button onClick={() => scrollToSection('roadmap')} style={mobileNavLinkStyle}>
               <ShieldCheck size={18} color="var(--primary)" /> What's Coming Next
             </button>
+            <button onClick={() => scrollToSection('faq')} style={mobileNavLinkStyle}>
+              <HelpCircle size={18} color="var(--primary)" /> FAQ
+            </button>
           </div>
 
           <button
             onClick={() => scrollToSection('waitlist')}
             className="btn btn-primary"
-            style={{ width: '100%', marginTop: '0.5rem', justifyContent: 'center' }}
+            style={{ width: '100%', marginTop: '0.5rem', minHeight: '48px', justifyContent: 'center' }}
           >
             <span>Join Early Access Waitlist</span>
             <ArrowRight size={16} />
@@ -245,7 +251,8 @@ const mobileNavLinkStyle = {
   background: 'none',
   border: 'none',
   padding: '0.75rem 0.5rem',
-  fontSize: '1rem',
+  minHeight: '44px',
+  fontSize: '0.95rem',
   fontWeight: 600,
   color: 'var(--text-primary)',
   textAlign: 'left',
