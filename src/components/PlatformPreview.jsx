@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { 
-  Wifi, 
-  Utensils, 
-  Wind, 
-  Sparkles, 
-  ShieldCheck, 
-  Star, 
-  MapPin, 
-  Lock, 
+import {
+  Wifi,
+  Utensils,
+  Wind,
+  Sparkles,
+  ShieldCheck,
+  Star,
+  MapPin,
+  Lock,
   Heart,
   Eye,
   Calendar,
@@ -21,19 +21,18 @@ import {
 const mockProperties = [
   {
     id: 'pal-pg',
-    college: 'Cooch Behar Government Engineering College'
     category: 'PAL PG (College Pick)',
     title: 'PAL PG',
     location: 'Runners Club, Harinchowra',
     distance: '15 mins to College / Institution',
     collegeCommute: '15 mins to Institution',
-    rent: '2,000',
+    rent: '6,500',
     deposit: '1 Month Security Deposit',
     sharing: 'Single & 2-Sharing (Furnished Rooms)',
     type: 'Student & Professional Friendly PG',
     rating: '4.9',
     reviewCount: 52,
-    tags: ['15 Mins to College', 'Near Runners Club', 'Zero Brokerage', 'Student Friendly'],
+    tags: ['15 Mins to CGEC', 'Near Runners Club', 'Zero Brokerage', 'Student Friendly'],
     food: '3 Nutritious Meals Included (Home Style Cooked)',
     amenities: [
       { name: 'High-Speed WiFi', icon: Wifi },
@@ -49,11 +48,12 @@ const mockProperties = [
   },
   {
     id: 'prop-1',
+    college: 'St. John’s & Christ University',
     category: 'Single Private Room',
     title: 'The Green Oasis Premium Co-living',
     location: 'HSR Layout, Sector 4, Bengaluru',
     distance: '8 mins to Tech Colleges & IT Corridors',
-    collegeCommute: '8 mins to University Campuses',
+    collegeCommute: '8 mins to Campuses',
     rent: '13,500',
     deposit: '1 Month (₹13,500)',
     sharing: 'Single Occupancy (Private Room)',
@@ -76,11 +76,12 @@ const mockProperties = [
   },
   {
     id: 'prop-2',
+    college: 'Symbiosis International University & IIMS',
     category: '2-Sharing PG / Hostel',
     title: 'Silver Oaks Residency & Hostel',
     location: 'Hinjawadi Phase 1, Pune',
-    distance: '10 mins to Symbiosis & Engineering Colleges',
-    collegeCommute: '10 mins to Engineering Campuses',
+    distance: '10 mins to Engineering & Tech Campuses',
+    collegeCommute: '10 mins to Symbiosis',
     rent: '8,200',
     deposit: '₹8,000 (Refundable in 7 Days)',
     sharing: '2-Person Sharing (Spacious Twin Beds)',
@@ -103,11 +104,12 @@ const mockProperties = [
   },
   {
     id: 'prop-3',
+    college: 'Amity & Management Institutes',
     category: 'Studio Flat / 1BHK',
     title: 'Urban Habitat Gated Studio Apartment',
     location: 'Cyber City, Sector 28, Gurgaon / Delhi NCR',
     distance: '12 mins to Management & CyberHub Institutes',
-    collegeCommute: '12 mins to Institutes & Rapid Metro',
+    collegeCommute: '12 mins to Institutes',
     rent: '19,000',
     deposit: '1 Month Security',
     sharing: 'Full Private Flat (1BHK/Studio)',
@@ -147,7 +149,7 @@ export default function PlatformPreview() {
   return (
     <section id="preview" className="section" style={{ backgroundColor: 'var(--bg-surface)', borderTop: '1px solid var(--border-light)', borderBottom: '1px solid var(--border-light)' }}>
       <div className="container">
-        
+
         {/* Section Header */}
         <div className="section-header">
           <div className="section-tag">
@@ -159,13 +161,13 @@ export default function PlatformPreview() {
             finding a PG looks like.
           </h2>
           <p className="section-subtitle">
-            Say goodbye to blurry broker photos, misleading deposit claims, and hidden charges. 
+            Say goodbye to blurry broker photos, misleading deposit claims, and hidden charges.
             PG Dekho delivers complete transparency in one interactive card.
           </p>
         </div>
 
         {/* Prototype Disclaimer Banner */}
-        <div 
+        <div
           style={{
             maxWidth: '960px',
             margin: '0 auto 1.75rem auto',
@@ -192,7 +194,7 @@ export default function PlatformPreview() {
         </div>
 
         {/* Tab Switcher for Sample Stay Categories */}
-        <div 
+        <div
           className="no-scrollbar"
           style={{
             display: 'flex',
@@ -227,7 +229,7 @@ export default function PlatformPreview() {
         </div>
 
         {/* Simulated Property Card Container */}
-        <div 
+        <div
           className="glass-card card-hover"
           style={{
             maxWidth: '1020px',
@@ -239,9 +241,9 @@ export default function PlatformPreview() {
           }}
         >
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 340px), 1fr))' }}>
-            
+
             {/* Left Visual Area */}
-            <div 
+            <div
               style={{
                 background: activeProp.gradient,
                 padding: 'clamp(1.5rem, 4vw, 2.25rem)',
@@ -288,7 +290,7 @@ export default function PlatformPreview() {
               </div>
 
               {/* Center Abstract Room Blueprint */}
-              <div 
+              <div
                 style={{
                   background: 'rgba(255, 255, 255, 0.08)',
                   backdropFilter: 'blur(10px)',
@@ -331,7 +333,7 @@ export default function PlatformPreview() {
             {/* Right Information & Amenities Area */}
             <div style={{ padding: 'clamp(1.5rem, 3.5vw, 2.25rem)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                
+
                 {/* Title & Location */}
                 <div style={{ marginBottom: '1.25rem' }}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '0.5rem' }}>
@@ -345,20 +347,22 @@ export default function PlatformPreview() {
                   <h3 style={{ fontSize: 'clamp(1.15rem, 2.5vw, 1.35rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
                     {activeProp.title}
                   </h3>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                     <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
                       <MapPin size={15} color="var(--primary)" style={{ flexShrink: 0 }} />
                       <span>{activeProp.location}</span>
                     </p>
-                    <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.82rem', color: 'var(--primary)', fontWeight: 600 }}>
-                      <Clock size={14} style={{ flexShrink: 0 }} />
-                      <span>Commute to College / Institution: {activeProp.collegeCommute || activeProp.distance}</span>
-                    </p>
+                    {activeProp.college && (
+                      <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.84rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+                        <GraduationCap size={15} color="var(--primary)" style={{ flexShrink: 0 }} />
+                        <span>Nearest College: <strong style={{ color: 'var(--primary)' }}>{activeProp.college}</strong> ({activeProp.collegeCommute || activeProp.distance})</span>
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 {/* Transparent Rent & Deposit Strip */}
-                <div 
+                <div
                   style={{
                     backgroundColor: 'var(--bg-subtle)',
                     borderRadius: 'var(--radius-md)',
@@ -400,7 +404,7 @@ export default function PlatformPreview() {
                     Included Amenities & Facilities
                   </h4>
 
-                  <div 
+                  <div
                     style={{
                       display: 'grid',
                       gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
@@ -410,7 +414,7 @@ export default function PlatformPreview() {
                     {activeProp.amenities.map((item, idx) => {
                       const IconComponent = item.icon;
                       return (
-                        <div 
+                        <div
                           key={idx}
                           style={{
                             display: 'flex',
@@ -462,7 +466,7 @@ export default function PlatformPreview() {
 
         {/* Prototype Toast Notification */}
         {modalMessage && (
-          <div 
+          <div
             style={{
               position: 'fixed',
               bottom: '1.5rem',
