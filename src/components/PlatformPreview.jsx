@@ -21,12 +21,13 @@ import {
 const mockProperties = [
   {
     id: 'pal-pg',
+    college: 'Cooch Behar Government Engineering College'
     category: 'PAL PG (College Pick)',
     title: 'PAL PG',
     location: 'Runners Club, Harinchowra',
     distance: '15 mins to College / Institution',
     collegeCommute: '15 mins to Institution',
-    rent: '6,500',
+    rent: '2,000',
     deposit: '1 Month Security Deposit',
     sharing: 'Single & 2-Sharing (Furnished Rooms)',
     type: 'Student & Professional Friendly PG',
