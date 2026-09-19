@@ -13,16 +13,46 @@ import {
   Calendar,
   Zap,
   Tv,
-  Info
+  Info,
+  Clock,
+  GraduationCap
 } from 'lucide-react';
 
 const mockProperties = [
+  {
+    id: 'pal-pg',
+    category: 'PAL PG (College Pick)',
+    title: 'PAL PG',
+    location: 'Runners Club, Harinchowra',
+    distance: '15 mins to College / Institution',
+    collegeCommute: '15 mins to Institution',
+    rent: '6,500',
+    deposit: '1 Month Security Deposit',
+    sharing: 'Single & 2-Sharing (Furnished Rooms)',
+    type: 'Student & Professional Friendly PG',
+    rating: '4.9',
+    reviewCount: 52,
+    tags: ['15 Mins to College', 'Near Runners Club', 'Zero Brokerage', 'Student Friendly'],
+    food: '3 Nutritious Meals Included (Home Style Cooked)',
+    amenities: [
+      { name: 'High-Speed WiFi', icon: Wifi },
+      { name: '3 Home Meals Daily', icon: Utensils },
+      { name: 'Study Table & Bed', icon: Star },
+      { name: '100% Power Backup', icon: Zap },
+      { name: 'Biometric / Secure Lock', icon: Lock },
+      { name: 'In-Room Geyser & AC', icon: Wind },
+      { name: 'Daily Housekeeping', icon: Sparkles },
+      { name: '24/7 CCTV Security', icon: ShieldCheck },
+    ],
+    gradient: 'linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #2563EB 100%)'
+  },
   {
     id: 'prop-1',
     category: 'Single Private Room',
     title: 'The Green Oasis Premium Co-living',
     location: 'HSR Layout, Sector 4, Bengaluru',
-    distance: '450m from BDA Complex & Tech Parks',
+    distance: '8 mins to Tech Colleges & IT Corridors',
+    collegeCommute: '8 mins to University Campuses',
     rent: '13,500',
     deposit: '1 Month (₹13,500)',
     sharing: 'Single Occupancy (Private Room)',
@@ -48,7 +78,8 @@ const mockProperties = [
     category: '2-Sharing PG / Hostel',
     title: 'Silver Oaks Residency & Hostel',
     location: 'Hinjawadi Phase 1, Pune',
-    distance: '600m from Infosys Circle & Megapolis',
+    distance: '10 mins to Symbiosis & Engineering Colleges',
+    collegeCommute: '10 mins to Engineering Campuses',
     rent: '8,200',
     deposit: '₹8,000 (Refundable in 7 Days)',
     sharing: '2-Person Sharing (Spacious Twin Beds)',
@@ -74,11 +105,12 @@ const mockProperties = [
     category: 'Studio Flat / 1BHK',
     title: 'Urban Habitat Gated Studio Apartment',
     location: 'Cyber City, Sector 28, Gurgaon / Delhi NCR',
-    distance: '5 mins to DLF CyberHub & Rapid Metro',
+    distance: '12 mins to Management & CyberHub Institutes',
+    collegeCommute: '12 mins to Institutes & Rapid Metro',
     rent: '19,000',
     deposit: '1 Month Security',
     sharing: 'Full Private Flat (1BHK/Studio)',
-    type: 'Working Professionals / Couples',
+    type: 'Working Professionals & Students',
     rating: '4.95',
     reviewCount: 112,
     tags: ['Gated Society', 'Fully Furnished', 'No Gate Curfew'],
@@ -284,10 +316,10 @@ export default function PlatformPreview() {
               </div>
 
               {/* Bottom Visual Highlights */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', color: 'rgba(255,255,255,0.9)', flexWrap: 'wrap', gap: '0.4rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', color: 'rgba(255,255,255,0.95)', flexWrap: 'wrap', gap: '0.4rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                  <MapPin size={14} color="#FF8A65" style={{ flexShrink: 0 }} />
-                  <span>{activeProp.distance}</span>
+                  <GraduationCap size={15} color="#93C5FD" style={{ flexShrink: 0 }} />
+                  <span style={{ fontWeight: 600 }}>{activeProp.distance}</span>
                 </div>
                 <span className="badge badge-success" style={{ fontSize: '0.72rem' }}>
                   Available Now
@@ -312,10 +344,16 @@ export default function PlatformPreview() {
                   <h3 style={{ fontSize: 'clamp(1.15rem, 2.5vw, 1.35rem)', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
                     {activeProp.title}
                   </h3>
-                  <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                    <MapPin size={15} color="var(--primary)" style={{ flexShrink: 0 }} />
-                    {activeProp.location}
-                  </p>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                    <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                      <MapPin size={15} color="var(--primary)" style={{ flexShrink: 0 }} />
+                      <span>{activeProp.location}</span>
+                    </p>
+                    <p style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.82rem', color: 'var(--primary)', fontWeight: 600 }}>
+                      <Clock size={14} style={{ flexShrink: 0 }} />
+                      <span>Commute to College / Institution: {activeProp.collegeCommute || activeProp.distance}</span>
+                    </p>
+                  </div>
                 </div>
 
                 {/* Transparent Rent & Deposit Strip */}
