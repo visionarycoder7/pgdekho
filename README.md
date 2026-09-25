@@ -96,6 +96,7 @@ pgdekho/
 │   │   ├── HowItWorks.jsx       # 3-Step guided flow
 │   │   ├── OwnerSection.jsx     # Dedicated property owner portal
 │   │   ├── FutureFeatures.jsx   # Product roadmap with status tags
+│   │   ├── MeetTheFounder.jsx   # Founder story, student mission & personal note
 │   │   ├── FAQSection.jsx       # Interactive FAQ accordion
 │   │   ├── Waitlist.jsx         # Waitlist form & success ticket
 │   │   └── Footer.jsx           # Footer with links, socials & author credit
@@ -178,9 +179,9 @@ await registerOwnerProperty(propertyData);
 
 ## 👤 Author & Creator
 
-Crafted by **Sohan**  
+Crafted by **Sohan** ([@visionarycoder7](https://github.com/visionarycoder7))  
 Project: **PG Dekho Technologies**  
-Contact: [hello@pgdekho.com](mailto:hello@pgdekho.com)
+Contact: [hello@pgdekho.com](mailto:hello@pgdekho.com) | [sohan.ghosh666@gmail.com](mailto:sohan.ghosh666@gmail.com)
 
 ---
 

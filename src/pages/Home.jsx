@@ -6,6 +6,7 @@ import ValueStrip from '../components/ValueStrip';
 import HowItWorks from '../components/HowItWorks';
 import OwnerSection from '../components/OwnerSection';
 import FutureFeatures from '../components/FutureFeatures';
+import MeetTheFounder from '../components/MeetTheFounder';
 import FAQSection from '../components/FAQSection';
 import Waitlist from '../components/Waitlist';
 import Footer from '../components/Footer';
@@ -45,10 +46,13 @@ export default function Home() {
         {/* 7. Upcoming Product Features & Roadmap */}
         <FutureFeatures />
 
-        {/* 8. Frequently Asked Questions */}
+        {/* 8. Meet the Founder & The Mission */}
+        <MeetTheFounder />
+
+        {/* 9. Frequently Asked Questions */}
         <FAQSection />
 
-        {/* 9. Waitlist Conversion Section */}
+        {/* 10. Waitlist Conversion Section */}
         <Waitlist initialRole={targetRole} />
       </main>
 

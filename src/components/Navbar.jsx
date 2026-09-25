@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Compass, Building2, Sparkles, Menu, X, ArrowRight, ShieldCheck, HelpCircle } from 'lucide-react';
+import { Home, Compass, Building2, Sparkles, Menu, X, ArrowRight, ShieldCheck, HelpCircle, UserCheck } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -114,6 +114,13 @@ export default function Navbar() {
             Roadmap
           </button>
           <button 
+            onClick={() => scrollToSection('founder')} 
+            className="nav-link"
+            style={navLinkStyle}
+          >
+            Founder
+          </button>
+          <button 
             onClick={() => scrollToSection('faq')} 
             className="nav-link"
             style={navLinkStyle}
@@ -200,6 +207,9 @@ export default function Navbar() {
             </button>
             <button onClick={() => scrollToSection('roadmap')} style={mobileNavLinkStyle}>
               <ShieldCheck size={18} color="var(--primary)" /> What's Coming Next
+            </button>
+            <button onClick={() => scrollToSection('founder')} style={mobileNavLinkStyle}>
+              <UserCheck size={18} color="var(--primary)" /> Meet the Founder
             </button>
             <button onClick={() => scrollToSection('faq')} style={mobileNavLinkStyle}>
               <HelpCircle size={18} color="var(--primary)" /> FAQ

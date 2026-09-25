@@ -14,7 +14,6 @@ import {
   Zap,
   Tv,
   Info,
-  Clock,
   GraduationCap
 } from 'lucide-react';
 
