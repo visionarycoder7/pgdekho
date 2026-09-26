@@ -10,7 +10,8 @@ import {
   Sparkles, 
   ArrowRight,
   CheckCircle2,
-  Info
+  Info,
+  Phone
 } from 'lucide-react';
 
 const ownerPerks = [
@@ -161,20 +162,47 @@ export default function OwnerSection({ onJoinWaitlistAsOwner }) {
                   </div>
                 </div>
 
-                {/* CTA Button */}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.75rem' }}>
-                  <button
-                    onClick={handleOwnerClick}
-                    className="btn btn-accent btn-lg"
-                    style={{ borderRadius: 'var(--radius-md)' }}
-                  >
-                    <span>List Your Property — Coming Soon</span>
-                    <ArrowRight size={18} />
-                  </button>
+                {/* CTA Button & Direct Contact */}
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '1rem' }}>
+                  <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                    <button
+                      onClick={handleOwnerClick}
+                      className="btn btn-accent btn-lg"
+                      style={{ borderRadius: 'var(--radius-md)' }}
+                    >
+                      <span>List Your Property</span>
+                      <ArrowRight size={18} />
+                    </button>
 
-                  <span style={{ fontSize: '0.78rem', color: 'rgba(255, 255, 255, 0.6)' }}>
-                    * Early owner onboarding will open prior to public launch.
-                  </span>
+                    <a
+                      href="https://wa.me/918240318774?text=Hi%2C%20I%20want%20to%20list%20my%20property%20on%20PG%20Dekho"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-lg"
+                      style={{
+                        backgroundColor: '#25D366',
+                        color: '#FFFFFF',
+                        borderRadius: 'var(--radius-md)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.5rem',
+                        fontWeight: 700,
+                        textDecoration: 'none'
+                      }}
+                    >
+                      <MessageSquare size={18} fill="#FFFFFF" />
+                      <span>WhatsApp: 8240318774</span>
+                    </a>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '0.85rem', color: '#FCD34D', fontWeight: 600 }}>
+                      Want to list your property? Contact 8240318774
+                    </span>
+                    <span style={{ fontSize: '0.8rem', color: 'rgba(255, 255, 255, 0.7)' }}>
+                      (This is also a WhatsApp number)
+                    </span>
+                  </div>
                 </div>
               </div>
 
@@ -283,10 +311,58 @@ export default function OwnerSection({ onJoinWaitlistAsOwner }) {
                 Owner Registration Launching Soon
               </h3>
 
-              <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                We are currently onboarding selected PG and hostel owners in Bengaluru, Pune, and Delhi NCR for our private pilot.
-                Join our waitlist below as an owner to get your property listed with priority verification!
+              <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                We are onboarding property owners for direct listings. You can join the waitlist or reach out directly to list immediately:
               </p>
+
+              <div style={{ backgroundColor: 'var(--bg-subtle)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-md)', marginBottom: '1.25rem', border: '1px solid var(--border-light)', textAlign: 'left' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.35rem' }}>
+                  Want to list your property?
+                </div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.65rem' }}>
+                  Contact: <strong style={{ color: 'var(--primary)' }}>8240318774</strong> (Also on WhatsApp)
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                  <a
+                    href="https://wa.me/918240318774?text=Hi%2C%20I%20want%20to%20list%20my%20property%20on%20PG%20Dekho"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      backgroundColor: '#25D366',
+                      color: '#FFFFFF',
+                      padding: '0.35rem 0.75rem',
+                      borderRadius: 'var(--radius-sm)',
+                      fontSize: '0.78rem',
+                      fontWeight: 700,
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <MessageSquare size={13} fill="#FFFFFF" />
+                    WhatsApp 8240318774
+                  </a>
+                  <a
+                    href="tel:+918240318774"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      backgroundColor: 'var(--primary)',
+                      color: '#FFFFFF',
+                      padding: '0.35rem 0.75rem',
+                      borderRadius: 'var(--radius-sm)',
+                      fontSize: '0.78rem',
+                      fontWeight: 600,
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <Phone size={13} />
+                    Call Directly
+                  </a>
+                </div>
+              </div>
 
               <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center' }}>
                 <button

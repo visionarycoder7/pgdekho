@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TopBanner from '../components/TopBanner';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import PlatformPreview from '../components/PlatformPreview';
@@ -24,6 +25,9 @@ export default function Home() {
 
   return (
     <div className="home-page" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      {/* 0. Top Owner Listing Announcement & Contact Bar */}
+      <TopBanner />
+
       {/* 1. Sticky Navigation Bar */}
       <Navbar />
 
