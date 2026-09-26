@@ -3,8 +3,8 @@ import { ArrowRight, Sparkles, MapPin, Search, Bed, IndianRupee, CheckCircle2 } 
 
 export default function Hero() {
   const [selectedCity, setSelectedCity] = useState('Bengaluru (Koramangala, HSR)');
-  const [selectedType, setSelectedType] = useState('PG / Co-living (All)');
-  const [selectedBudget, setSelectedBudget] = useState('₹9,000 - ₹15,000');
+  const [selectedType, setSelectedType] = useState('Commercial Property');
+  const [selectedBudget, setSelectedBudget] = useState('₹2,000 - ₹10,000');
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -192,10 +192,6 @@ export default function Hero() {
               >
                 <option value="Bengaluru (Koramangala, HSR)">Bengaluru (Koramangala / HSR)</option>
                 <option value="Pune (Hinjawadi, Viman Nagar)">Pune (Hinjawadi / Viman Nagar)</option>
-                <option value="Delhi NCR (Gurgaon, Noida)">Delhi NCR (Gurgaon / Noida)</option>
-                <option value="Hyderabad (Hitec City)">Hyderabad (Hitec City / Gachibowli)</option>
-                <option value="Kota (Student Hubs)">Kota (Landmark / Rajiv Gandhi)</option>
-                <option value="Mumbai (Andheri, Powai)">Mumbai (Andheri / Powai)</option>
               </select>
             </div>
 
@@ -211,11 +207,10 @@ export default function Hero() {
                 onChange={(e) => setSelectedType(e.target.value)}
                 style={{ width: '100%', background: 'transparent', border: 'none', outline: 'none', fontWeight: 600, color: 'var(--text-primary)', cursor: 'pointer', fontSize: '0.88rem' }}
               >
+                <option value="Commercial Property">Commercial Property</option>
+                <option value="Flats">Flats</option>
+                <option value="Garages">Garages</option>
                 <option value="PG / Co-living (All)">PG / Co-living (All)</option>
-                <option value="Single Private Room PG">Single Private Room PG</option>
-                <option value="2/3 Sharing Hostel">2/3 Sharing Hostel</option>
-                <option value="1BHK / 2BHK Flat">1BHK / 2BHK Flat</option>
-                <option value="Room in Shared Flat">Room in Shared Flat</option>
               </select>
             </div>
 
@@ -231,10 +226,11 @@ export default function Hero() {
                 onChange={(e) => setSelectedBudget(e.target.value)}
                 style={{ width: '100%', background: 'transparent', border: 'none', outline: 'none', fontWeight: 600, color: 'var(--text-primary)', cursor: 'pointer', fontSize: '0.88rem' }}
               >
-                <option value="₹5,000 - ₹9,000">₹5,000 - ₹9,000 / mo</option>
-                <option value="₹9,000 - ₹15,000">₹9,000 - ₹15,000 / mo</option>
-                <option value="₹15,000 - ₹25,000">₹15,000 - ₹25,000 / mo</option>
-                <option value="₹25,000+">₹25,000+ (Luxury / Private)</option>
+                <option value="₹2,000 - ₹10,000">₹2,000 - ₹10,000 / mo</option>
+                <option value="₹10,000 - ₹25,000">₹10,000 - ₹25,000 / mo</option>
+                <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000 / mo</option>
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 / mo</option>
+                <option value="₹1,00,000+">₹1,00,000+ / mo</option>
               </select>
             </div>
 
