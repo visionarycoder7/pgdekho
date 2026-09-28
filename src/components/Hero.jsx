@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, MapPin, Search, Bed, IndianRupee, CheckCircle2 } 
 
 export default function Hero() {
   const [selectedCity, setSelectedCity] = useState('Bengaluru (Koramangala, HSR)');
-  const [selectedType, setSelectedType] = useState('Commercial Property');
+  const [selectedType, setSelectedType] = useState('PGs');
   const [selectedBudget, setSelectedBudget] = useState('₹2,000 - ₹10,000');
 
   const scrollToSection = (id) => {
@@ -195,22 +195,22 @@ export default function Hero() {
               </select>
             </div>
 
-            {/* Room Type */}
+            {/* What are you looking for */}
             <div style={{ background: 'var(--bg-subtle)', padding: '0.65rem 0.85rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
               <label htmlFor="hero-stay-type" style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.72rem', color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.2rem' }}>
-                <Bed size={13} color="var(--primary)" /> Stay Type
+                <Bed size={13} color="var(--primary)" /> What are you looking for
               </label>
               <select 
                 id="hero-stay-type"
-                aria-label="Stay Type"
+                aria-label="What are you looking for"
                 value={selectedType} 
                 onChange={(e) => setSelectedType(e.target.value)}
                 style={{ width: '100%', background: 'transparent', border: 'none', outline: 'none', fontWeight: 600, color: 'var(--text-primary)', cursor: 'pointer', fontSize: '0.88rem' }}
               >
-                <option value="Commercial Property">Commercial Property</option>
+                <option value="PGs">PGs</option>
                 <option value="Flats">Flats</option>
-                <option value="Garages">Garages</option>
-                <option value="PG / Co-living (All)">PG / Co-living (All)</option>
+                <option value="Garrage">Garrage</option>
+                <option value="Room rent">Room rent</option>
               </select>
             </div>
 
